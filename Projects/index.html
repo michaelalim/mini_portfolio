@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Scrimba Activities </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container" id="main-container">
+        <header>
+            <h1 id = "kel-title">
+                Kel's Mini Projects
+            </h1>
+            <h3>
+                Projects made from <a href="https://scrimba.com/dashboard">Scrimba</a> and other resources
+            </h3>
+        </header>
+        
+        <sidebar>
+
+            <fieldset>
+                
+                <legend><div>Filters</div></legend>
+                    <div class="filter-divider" id="diff-div">
+                        <span class="filter-label" id="diff-label">Difficulty</span>
+                        <div class="diff-div" id="diff-div-all"><input type="radio" name = "difficulty" class = "difficulty button" id="dif-allbtn" value="dif-all" checked> All </input></div>
+                        <div class="diff-div" id="diff-div-easy"><input type="radio" name = "difficulty" class = "difficulty button" id="easybtn" value="easy"> Easy </input></div>
+                        <div class="diff-div" id="diff-div-mod"><input type="radio" name = "difficulty" class = "difficulty button" id="moderatebtn" value="moderate"> Moderate </input></div>
+                        <div class="diff-div" id="diff-div-hard"><input type="radio" name = "difficulty" class = "difficulty button" id="hardbtn" value="hard"> Hard </input></div>
+                    </div>
+
+                    <div class="filter-divider" id="res-div">
+                        <span class="filter-label" id="res-label">Resource</span>
+                        <div class="res-div" id="res-div-all"><input type="radio" name = "resource" class = "resource button" id="res-allbtn" value="res-all" checked> All </input></div>
+                        <div class="res-div" id="res-div-scr"><input type="radio" name = "resource" class = "resource button" id="scrimbabtn" value="scrimba"> Scrimba </input></div>
+                        <div class="res-div" id="res-div-oth"><input type="radio" name = "resource" class = "resource button" id="othersbtn" value="others"> Others </input></div>
+                    </div>     
+                    
+                    <div class="filter-divider" id="lang-div">
+                        <span class="filter-label" id="lang-label">Language</span>
+                        <div class="lang-div" id="lang-div-1"><input type="radio" name = "language" class="language button" id="lang-allbtn" value="lang-all" checked>All</div>
+                        <div class="lang-div" id="lang-div-2"><input type="radio" name = "language" class="language button" id="cssbtn" value="css">CSS</div>
+                        <div class="lang-div" id="lang-div-3"><input type="radio" name = "language" class="language button" id="jsbtn" value="js">JS</div>
+                    </div>
+            </fieldset>
+        </sidebar>
+
+        <section>
+            <h2> Projects </h2>
+            
+            <div id="section-body">
+            </div>
+
+        </section>
+        <footer>
+            Created by: Alim, Michael Jason P.
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <title>Energy Meter</title>
+    </head>
+    <body>
+        
+        <div class="container">
+                <label for="input">How's your energy today?</label>
+                <input id="input" type="number" 
+                min="1" max="10"
+                value="5">
+            
+                <span class = "emoji">🙂 </span>
+                
+                <div id="sideEmojiDiv"><br>
+                <span class = "emoji">🙂 </span>
+                <meter id="energy" 
+                min="0" max="10" 
+                low="3" high="7" optimum="10"
+                value="5"></meter>
+                <span class = "emoji">🙂  </span>
+                </div>
+                
+                <span class = "emoji"> 🙂 </span>
+        </div>
+       
+        <script src="index.js"></script>
+    </body>
+</html>
