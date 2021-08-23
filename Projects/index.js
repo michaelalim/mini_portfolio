@@ -67,7 +67,7 @@ function showProject(arr) {
         card.classList.add("project-card");
         main.appendChild(card);
 
-        card.innerHTML = `<a target="_blank" href="${project.link}"><div class = "project-card"><img class="gifScreen" 
+        card.innerHTML = `<a href="${project.link}"><div class = "project-card"><img class="gifScreen" 
         src="${project.screen}"></a>`
 
         const title = document.createElement("h2");

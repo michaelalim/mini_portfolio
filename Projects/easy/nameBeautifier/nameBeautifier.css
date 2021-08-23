@@ -53,3 +53,21 @@ button {
 button:hover {
     cursor: pointer;
 }
+
+.home{
+    background: rgba(46, 96, 139, 0.55);
+    color: rgb(99, 56, 20);
+    border-radius: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+}
+
+.home:hover,
+.home:focus{
+    background: rgba(46, 96, 139, 0.85);
+    color: rgb(209, 166, 130);
+}

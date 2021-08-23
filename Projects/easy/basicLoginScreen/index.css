@@ -128,3 +128,18 @@ input:focus{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.home{
+    background: rgba(102, 0, 81, 0.55);
+    color:rgb(196, 225, 245);
+    border-radius: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+.home:hover,
+.home:focus{
+    background: rgba(102, 0, 81, 0.85);
+}
