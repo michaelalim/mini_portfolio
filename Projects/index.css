@@ -670,14 +670,68 @@ section h2{
 
 footer{
     background: #0c123a;
+    height: fit-content;
     box-shadow: 0 3px 40px 5px #161616;
     grid-area: f;
     color: #dedede;
     font-size: 7px;
-    display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "f f"
+        "scr wds";
+    padding-bottom: 15px;
+}
+
+footer h4, h5{
+    font-size: 1.1em;
+}
+
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li{
+    padding: 2px 0;
+}
+
+footer li a{
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+footer li a:visited{
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+footer li a:hover{
+    cursor: pointer;
+    color: white;
+}
+
+.head-of-footer{
+    margin: 0;
+    padding: 0;
+    grid-area: f;
+}
+
+.footer-scr{
+    grid-area: scr;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-wds{
+    grid-area: wds;
+    margin: 0;
+    padding: 0;
 }
 
 header, section, footer{

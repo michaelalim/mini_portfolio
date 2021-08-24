@@ -17,10 +17,15 @@ const projectArr = [
     screen:"moderate/socialMediaForCats/socialMediaForCats.gif", 
     dif:"mod", ref: "scr", lang: "js"},
 
-    {projectName: "Simple Login Form (Front End)", 
+    {projectName: "Transparent Login Form", 
     link: "easy/basicLoginScreen/index.html", 
     screen:"easy/basicLoginScreen/loginForm.gif", 
-    dif:"eas", ref: "oth", lang: "css"}    
+    dif:"eas", ref: "oth", lang: "css"}, // webdevsimplified 
+    
+    {projectName: "CSS-Made Tooltip", 
+    link: "easy/cssTooltips/index.html", 
+    screen:"easy/cssTooltips/cssTooltips.gif", 
+    dif:"eas", ref: "oth", lang: "css"}
 ];
 
 showProject(projectArr)
@@ -37,6 +42,7 @@ function filterProjs () {
     const filteredArr = projectArr.filter((p) => {
         
             if (isAllDiff && isAllRes && isAllLgg){
+                
                 return p
             } else if (diff == p.dif && isAllRes && isAllLgg){
                 return diff
@@ -56,10 +62,14 @@ function filterProjs () {
     })
     
     showProject(filteredArr)
+    
 
 };
 
 function showProject(arr) {
+    
+    // this is to clear the body every time showProject is ran
+    main.textContent = "";
 
     arr.forEach(project => {
 
@@ -75,20 +85,12 @@ function showProject(arr) {
         title.textContent = project.projectName;
         card.appendChild(title);
 
-        removeCards(main, card);
+        
 
     })
+
 }
 
 btns.forEach((btn) => {
     btn.addEventListener("click", filterProjs);
-    
 });
-
-function removeCards(content, frame) {
-    btns.forEach((b) => {
-        b.addEventListener("click", () => {
-            content.removeChild(frame);
-        })
-    })
-}
