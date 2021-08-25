@@ -4,4 +4,5 @@ All mini projects I have done in a single mini-portfolio. Projects here are usin
 
 ## Objective
 
-### to improve my Javascript and CSS skills and then proceed to advanced JS Libraries like React.
+- to improve my Javascript and CSS skills
+- to be able to have the necessary skills to learn React
