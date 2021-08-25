@@ -81,7 +81,11 @@ body, html{
     animation-timing-function: ease-in-out;
 }
 
-.home{
+.material-icons-outlined.skip{
+    right: 100px;
+}
+
+.material-icons-outlined{
     background: rgba(46, 96, 139, 0.55);
     color: rgb(99, 56, 20);
     border-radius: 100%;
@@ -93,8 +97,8 @@ body, html{
     font-weight: bolder;
 }
 
-.home:hover,
-.home:focus{
+.material-icons-outlined:hover,
+.material-icons-outlined:focus{
     background: rgba(46, 96, 139, 0.85);
     color: rgb(206, 186, 170);
 }

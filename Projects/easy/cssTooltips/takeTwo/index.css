@@ -1,0 +1,92 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body, html{
+    padding: 0;
+    margin: 0;
+    background: #8db3b1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.material-icons-outlined.skip{
+    right: 100px;
+}
+
+.tooltip-img{
+    height: 100%;
+    border-radius: 50%;
+}
+
+.image-container{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+    position: relative;
+}
+
+.image-container:hover{
+    opacity: 0.95;
+}
+
+.image-container::before,
+.image-container::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 55%;
+    transform: translateX(100%) translateY(-50%) scale(var(--scale)); /* this moves the block in relation to its size */
+    transition: 200ms transform;
+    transform-origin: left center;
+}
+
+.image-container::before{
+    content: attr(data-tooltip);
+    color: white;
+    font-size: 2em;
+    padding: .5rem 2rem;
+    text-align: center;
+    width: max-content;
+    max-height: 100%;
+    max-width: 200px;
+    border-radius: .3rem;
+    --scale: 0;
+    background: #333333;
+}
+
+.image-container:hover::before,
+.image-container:hover::after{
+    --scale: 1;
+}
+
+.image-container::after{
+    content: "";
+    left: 94%;
+    --scale: 0;
+    border: 10px solid transparent;
+    border-right-color: #333;
+}
+
+
+.material-icons-outlined{
+    background: rgba(46, 96, 139, 0.55);
+    color: rgb(99, 56, 20);
+    border-radius: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+}
+
+.material-icons-outlined:hover,
+.material-icons-outlined:focus{
+    background: rgba(46, 96, 139, 0.85);
+    color: rgb(206, 186, 170);
+}
