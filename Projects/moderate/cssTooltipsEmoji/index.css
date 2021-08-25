@@ -1,0 +1,216 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: linear-gradient(225deg, #a15f67, #dba4aa);
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+
+h1{
+    display: inline-block;
+    height: 5vh;
+    background: transparent;
+    font-size: 4rem;
+    margin: 5rem 0 2rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(27, 24, 24);
+}
+
+.emoji{
+    --emojisize: 200px;
+    margin: 1rem;
+    height: var(--emojisize);
+    width: var(--emojisize);
+    opacity: 0.99999;
+    position: relative;
+    cursor: pointer;
+}
+
+.emoji:hover{
+    opacity: 0.9;
+}
+
+.haha::after, 
+.haha::before, 
+.facemask::before, 
+.facemask::after, 
+.woah::before, 
+.woah::after{
+    position: absolute;
+    content: "";
+    --height-popup: 80px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) scale(var(--scale));
+    --scale: 0;
+    transition: 150ms transform;
+    transform-origin: bottom;
+}
+
+.haha:hover::after, 
+.haha:hover::before, 
+.facemask:hover::before, 
+.facemask:hover::after, 
+.woah:hover::before, 
+.woah:hover::after{
+    --scale: 1;
+}
+
+.haha::before, .facemask::before, .woah::before{
+    height: var(--height-popup);
+    width: max-content;
+    max-width: 100%;
+    background: #222;
+    content: attr(data-tooltip);
+    color: white;
+    font-size: 3rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    --scale: 0;
+}
+
+.haha::after, .facemask::after, .woah::after{
+    content: "";
+    height: calc(var(--height-popup) * 0.15);
+    width: 20px;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0) --scale(0);
+    border: 10px solid transparent;
+    border-top-color: #222;
+    transform-origin: top;
+}
+
+.head{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background: #ffc830;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 5px -5px 10px 3px #6e4247;
+    z-index: -2;
+}
+
+.eyes{
+    position: absolute;
+    top: calc(var(--emojisize) * 0.25);
+    left: calc(var(--emojisize) * 0.5);
+}
+
+.eye{
+    position: absolute;
+    width: calc(var(--emojisize)*0.075);
+    height: calc(var(--emojisize)*0.15);
+    background: black;
+    border-radius: 50%;
+}
+
+.lefteye{
+    left: calc(var(--emojisize) * -0.15);
+}
+
+.righteye{
+    right: calc(var(--emojisize) * -0.15);
+}
+
+.smile{
+    --mouthheight: calc(var(--emojisize) * 0.3);
+    position: absolute;
+    bottom: calc(var(--emojisize) * 0.15);
+    left: calc(var(--emojisize) * 0.5);
+    height: var(--mouthheight);
+    width: calc(var(--emojisize) * 0.6);
+    transform: translateX(-50%);
+    background: black;
+    border-radius: 5% 5% var(--mouthheight) var(--mouthheight);
+}
+
+.mask{
+    height: calc(var(--emojisize) * 0.30);
+    width: calc(var(--emojisize) * 0.6);
+    background: rgb(143, 195, 219);
+    border: calc(var(--emojisize) * 0.02) solid rgb(201, 227, 240);
+    border-radius: 0.5rem;
+    left: calc(var(--emojisize) * 0.2);
+    transform: none;
+}
+
+.strap{
+    position: absolute;
+    background: #eee;
+    border: calc(var(--emojisize) * 0.01) solid rgb(201, 227, 240);
+    width: calc(var(--emojisize) * 0.5);
+    height: calc(var(--emojisize) * 0.1);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.top-left{
+    transform: rotate(20deg);
+    left: calc(var(--emojisize) * -0.45);
+    top: calc(var(--emojisize) * -0.10);
+}
+
+.top-right{
+    transform: rotate(-20deg);
+    right: calc(var(--emojisize) * -0.45);
+    top: calc(var(--emojisize) * -0.10);
+}
+
+.bottom-right{
+    transform: rotate(20deg);
+    right: calc(var(--emojisize) * -0.45);
+    bottom: calc(var(--emojisize) * -0.10);
+}
+
+.bottom-left{
+    transform: rotate(-20deg);
+    left: calc(var(--emojisize) * -0.45);
+    bottom: calc(var(--emojisize) * -0.10);
+}
+
+.wow{
+    position: absolute;
+    bottom: calc(var(--emojisize) * 0.15);
+    left: calc(var(--emojisize) * 0.5);
+    height: calc(var(--emojisize) * 0.2);
+    width: calc(var(--emojisize) * 0.15);
+    background: black;
+    transform: translateX(-50%);
+    border-radius: 100%;
+}
+
+.home{
+    background: #222;
+    color: #a15f67;
+    border-radius: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+}
+
+.home:hover,
+.home:focus{
+    background: #dba4aa;
+    color: #222;
+}

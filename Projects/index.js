@@ -22,10 +22,10 @@ const projectArr = [
     screen:"easy/basicLoginScreen/loginForm.gif", 
     dif:"eas", ref: "oth", lang: "css"}, // webdevsimplified 
     
-    {projectName: "CSS-Made Tooltip", 
-    link: "easy/cssTooltips/index.html", 
-    screen:"easy/cssTooltips/cssTooltips.gif", 
-    dif:"eas", ref: "oth", lang: "css"}
+    {projectName: "CSS-Made Emoji & Tooltip", 
+    link: "moderate/cssTooltipsEmoji/index.html", 
+    screen:"moderate/cssTooltipsEmoji/cssTooltips.gif", 
+    dif:"mod", ref: "oth", lang: "css"}
 ];
 
 showProject(projectArr)
