@@ -25,7 +25,12 @@ const projectArr = [
     {projectName: "CSS-Made Emoji & Tooltip", 
     link: "moderate/cssTooltipsEmoji/index.html", 
     screen:"moderate/cssTooltipsEmoji/cssTooltips.gif", 
-    dif:"mod", ref: "oth", lang: "css"}
+    dif:"mod", ref: "oth", lang: "css"},
+
+    {projectName: "Magic 8 Ball", 
+    link: "moderate/magicBall/index.html", 
+    screen:"moderate/magicBall/magicBall.gif", 
+    dif:"mod", ref: "scr", lang: "js"}
 ];
 
 showProject(projectArr)

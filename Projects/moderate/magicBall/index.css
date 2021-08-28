@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    font-family: "Kaushan Script", cursive;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    min-width: 600px;
+    background: url(background/background.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+.advice-eye{
+    height: 350px;
+    width: 400px;
+    background: linear-gradient(235deg, rgb(231, 217, 233), rgb(235, 172, 209));
+    opacity: 0.75;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    box-shadow: 5px 0 10px 5px rgb(31, 118, 189);
+    margin-top: 50px;
+}
+
+.advice-display{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 2rem;
+    color:rgb(18, 70, 112);
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    width: 325px;
+}
+
+#advice-btn{
+    width: max-content;
+    border: none;
+    background: linear-gradient(235deg, rgb(231, 217, 233), rgb(235, 172, 209));
+    color:rgb(18, 70, 112);
+    outline: none;
+    font-weight: bolder;
+    padding: 10px 20px;
+    box-shadow: 1px 0 10px 1px rgb(31, 118, 189);
+    margin: auto;
+    margin-top: -50px;
+    opacity: 0.9;
+    font-size: 1.2em;
+}
+
+#advice-btn:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.adviceAnimation{
+    animation: show-up 1s ease-in 1 forwards;
+}
+
+@keyframes show-up {
+    from{
+        transform: translate(-50%, 0%);
+        opacity: 1;
+    }
+    75% {
+        transform: translate(-50%, -45%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(-50%, -60%);
+        opacity: 1;
+    }
+}
+
+.home{
+    background: hsla(277, 60%, 55%, 0.55);
+    color: hsl(214, 33%, 25%);
+    border-radius: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+}
+
+.home:hover,
+.home:focus{
+    background: hsla(277, 60%, 55%, 0.85);
+    color: hsl(214, 88%, 35%);
+}

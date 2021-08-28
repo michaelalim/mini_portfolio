@@ -1,4 +1,4 @@
-// I just linked the randomcolor() at html and somehow it works
+// I just linked the randomcolor() at html and somehow it worked
 
 // const darkColor = ["#660033", "#660066", "#330066", "#000066", "#003366", "#006666", "#006633", 
 // "#006600", "#336600", "#660000", "#663300", "#660000"];
