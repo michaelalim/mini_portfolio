@@ -33,6 +33,17 @@ const projectArr = [
     dif:"mod", ref: "scr", lang: "js"}
 ];
 
+//randomizing the order of my projects
+for (let i = 0; i < Math.ceil(projectArr.length / 2); i++){
+    let firstFilter = projectArr[0];
+    projectArr.splice(0, 1);
+    projectArr.splice(Math.floor(Math.random()*projectArr.length), 0, firstFilter);
+
+    let lastFilter = projectArr[projectArr.length - 1];
+    projectArr.splice(projectArr.length - 1, 1);
+    projectArr.splice(Math.floor(Math.random()*projectArr.length), 0, lastFilter);
+}
+
 showProject(projectArr)
 
 // the value of the radio buttons should be the same sa dif/ref/lang sang objects
@@ -72,17 +83,6 @@ function filterProjs () {
 };
 
 function showProject(arr) {
-
-    //randomizing the order of my projects
-    for (let i = 0; i < Math.ceil(arr.length / 2); i++){
-        let firstFilter = arr[0];
-        arr.splice(0, 1);
-        arr.splice(Math.floor(Math.random()*arr.length), 0, firstFilter);
-    
-        let lastFilter = arr[arr.length - 1];
-        arr.splice(arr.length - 1, 1);
-        arr.splice(Math.floor(Math.random()*arr.length), 0, lastFilter);
-    }
     
     // this is to clear the body every time showProject is ran
     main.textContent = "";
