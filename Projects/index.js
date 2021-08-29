@@ -20,12 +20,12 @@ const projectArr = [
     {projectName: "Transparent Login Form", 
     link: "easy/basicLoginScreen/index.html", 
     screen:"easy/basicLoginScreen/loginForm.gif", 
-    dif:"eas", ref: "oth", lang: "css"}, // webdevsimplified 
+    dif:"eas", ref: "oth", lang: "css"}, // wds
     
     {projectName: "CSS-Made Emoji & Tooltip", 
     link: "moderate/cssTooltipsEmoji/index.html", 
     screen:"moderate/cssTooltipsEmoji/cssTooltips.gif", 
-    dif:"mod", ref: "oth", lang: "css"},
+    dif:"mod", ref: "oth", lang: "css"}, //wds
 
     {projectName: "Magic 8 Ball", 
     link: "moderate/magicBall/index.html", 
@@ -65,13 +65,24 @@ function filterProjs () {
                 return (diff && res && lgg)
             }
     })
-    
+
     showProject(filteredArr)
     
 
 };
 
 function showProject(arr) {
+
+    //randomizing the order of my projects
+    for (let i = 0; i < Math.ceil(arr.length / 2); i++){
+        let firstFilter = arr[0];
+        arr.splice(0, 1);
+        arr.splice(Math.floor(Math.random()*arr.length), 0, firstFilter);
+    
+        let lastFilter = arr[arr.length - 1];
+        arr.splice(arr.length - 1, 1);
+        arr.splice(Math.floor(Math.random()*arr.length), 0, lastFilter);
+    }
     
     // this is to clear the body every time showProject is ran
     main.textContent = "";
@@ -89,8 +100,6 @@ function showProject(arr) {
         title.classList.add("project-title");
         title.textContent = project.projectName;
         card.appendChild(title);
-
-        
 
     })
 
