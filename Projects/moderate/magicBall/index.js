@@ -32,10 +32,13 @@ const gasps = [
 
 const displayEl = document.getElementById("advice-display");
 const btn = document.getElementById("advice-btn");
+let adviceLimit = 3;
 
 btn.addEventListener("click", () => {
-    let gasp = new Audio(gasps[Math.floor(Math.random()*gasps.length)]);
-    gasp.play();
+    adviceLimit--;
+    if(adviceLimit === 0){
+        btn.disabled = true;
+    }
 
     displayRand();
 });

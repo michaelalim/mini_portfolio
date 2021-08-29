@@ -33,7 +33,7 @@ const projectArr = [
     dif:"mod", ref: "scr", lang: "js"}
 ];
 
-//randomizing the order of my projects
+//randomizing the order of my projects 
 for (let i = 0; i < Math.ceil(projectArr.length / 2); i++){
     let firstFilter = projectArr[0];
     projectArr.splice(0, 1);

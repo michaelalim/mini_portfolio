@@ -59,6 +59,16 @@ body, html{
     font-size: 1.2em;
 }
 
+#advice-btn:disabled{
+    background: grey;
+    box-shadow: 0 0 5px 1px black;
+    opacity: 1;
+}
+
+#advice-btn:disabled:hover{
+    opacity: 1;
+}
+
 #advice-btn:hover{
     opacity: 1;
     cursor: pointer;
