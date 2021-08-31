@@ -41,6 +41,7 @@ header{
     margin: 0;
     padding: 0;
     border-radius: 10px;
+    animation: header-load 600ms ease-in-out 1;
 }
 
 header h1{
@@ -65,6 +66,12 @@ header h3 a{
     font-weight: bold;
 }
 
+#kel-title,
+header h3{
+    animation: headercontent-load 600ms ease-in-out 800ms 1 backwards;
+    transform-origin: bottom;
+}
+
 sidebar{
     background: #e6e7f8;
     box-shadow: 3px 3px 10px 2px #161616;
@@ -82,16 +89,13 @@ sidebar{
     z-index: 5;
     text-align: center;
     justify-content: center;
+    animation: sidebar-load 600ms ease-in-out 1;
 }
 
-/* sidebar{
-    background: #e6e7f8;
-    box-shadow: 0 3px 10px 2px #161616;
-    grid-area: s;
-    color: #1f173f;
-    display: grid;
-    position: fixed;
-} */
+sidebar div{
+    animation: sidebarcontent-load 600ms ease-in-out 800ms 1 backwards;
+    transform-origin: right;
+}
 
 fieldset{
     margin: 10px 15px;
@@ -615,6 +619,7 @@ section{
     grid-area: c;
     border-radius: 10px;
     padding-bottom: 25px;
+    animation: content-load 600ms ease-in-out 1;
 }
 
 section h2{
@@ -668,9 +673,16 @@ section h2{
 
 }
 
+section div,
+section h2{
+    animation: sectioncontent-load 600ms ease-in-out 800ms 1 backwards;
+    transform-origin: top;
+}
+
 footer{
     background: #0c123a;
     height: fit-content;
+    height: -moz-fit-content;
     box-shadow: 0 3px 40px 5px #161616;
     grid-area: f;
     color: #dedede;
@@ -685,6 +697,8 @@ footer{
         "f f"
         "scr wds";
     padding-bottom: 15px;
+    animation: footer-load 600ms ease-in-out 800ms 1 backwards;
+    transform-origin: top;
 }
 
 footer h4, h5{
@@ -758,4 +772,67 @@ header, section, footer{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #222435;
+}
+
+@keyframes header-load{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes sidebar-load{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes content-load{
+    0%{
+        transform: translatey(100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes footer-load{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+@keyframes headercontent-load{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+@keyframes sidebarcontent-load{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+@keyframes sectioncontent-load{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(100%);
+    }
 }
