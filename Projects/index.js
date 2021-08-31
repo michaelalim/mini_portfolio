@@ -88,14 +88,14 @@ function filterProjs () {
 };
 
 function showProject(arr) {
-    
+
     // this is to clear the body every time showProject is ran
     main.textContent = "";
-
     arr.forEach(project => {
 
         const card = document.createElement("div");
         card.classList.add("project-card");
+        card.classList.add("card-ani");
         main.appendChild(card);
 
         card.innerHTML = `<a href="${project.link}"><div class = "project-card"><img class="gifScreen" 
@@ -107,9 +107,10 @@ function showProject(arr) {
         card.appendChild(title);
 
     })
-
 }
 
 btns.forEach((btn) => {
     btn.addEventListener("click", filterProjs);
 });
+
+

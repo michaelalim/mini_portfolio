@@ -41,7 +41,7 @@ header{
     margin: 0;
     padding: 0;
     border-radius: 10px;
-    animation: header-load 600ms ease-in-out 1;
+    animation: header-load 200ms ease-in-out 1;
 }
 
 header h1{
@@ -68,7 +68,7 @@ header h3 a{
 
 #kel-title,
 header h3{
-    animation: headercontent-load 600ms ease-in-out 800ms 1 backwards;
+    animation: headercontent-load 400ms ease-in-out 100ms 1 backwards;
     transform-origin: bottom;
 }
 
@@ -89,11 +89,11 @@ sidebar{
     z-index: 5;
     text-align: center;
     justify-content: center;
-    animation: sidebar-load 600ms ease-in-out 1;
+    animation: sidebar-load 200ms ease-in-out 1;
 }
 
 sidebar div{
-    animation: sidebarcontent-load 600ms ease-in-out 800ms 1 backwards;
+    animation: sidebarcontent-load 400ms ease-in-out 100ms 1 backwards;
     transform-origin: right;
 }
 
@@ -619,7 +619,7 @@ section{
     grid-area: c;
     border-radius: 10px;
     padding-bottom: 25px;
-    animation: content-load 600ms ease-in-out 1;
+    animation: content-load 200ms ease-in-out 1;
 }
 
 section h2{
@@ -673,9 +673,9 @@ section h2{
 
 }
 
-section div,
+.card-ani,
 section h2{
-    animation: sectioncontent-load 600ms ease-in-out 800ms 1 backwards;
+    animation: sectioncontent-load 400ms ease-in-out 100ms 1 backwards;
     transform-origin: top;
 }
 
@@ -697,7 +697,7 @@ footer{
         "f f"
         "scr wds";
     padding-bottom: 15px;
-    animation: footer-load 600ms ease-in-out 800ms 1 backwards;
+    animation: footer-load 400ms ease-in-out 100ms 1 backwards;
     transform-origin: top;
 }
 
@@ -794,10 +794,10 @@ header, section, footer{
 
 @keyframes content-load{
     0%{
-        transform: translatey(100%);
+        transform: translateY(100%);
     }
     100%{
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
