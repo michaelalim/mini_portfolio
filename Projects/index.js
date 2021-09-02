@@ -13,19 +13,19 @@ const projectArr = [
     dif:"eas", ref: "scr", lang: "js"},
 
     {projectName: "Social Media for Cats", 
-    link: "moderate/socialMediaForCats/index.html", 
-    screen:"moderate/socialMediaForCats/socialMediaForCats.gif", 
-    dif:"mod", ref: "scr", lang: "js"},
+    link: "easy/socialMediaForCats/index.html", 
+    screen:"easy/socialMediaForCats/socialMediaForCats.gif", 
+    dif:"eas", ref: "scr", lang: "js"},
 
     {projectName: "Transparent Login Form", 
     link: "easy/basicLoginScreen/index.html", 
     screen:"easy/basicLoginScreen/loginForm.gif", 
-    dif:"eas", ref: "oth", lang: "css"}, // wds
+    dif:"eas", ref: "oth", lang: "css"},
     
     {projectName: "CSS-Made Emoji & Tooltip", 
-    link: "moderate/cssTooltipsEmoji/index.html", 
-    screen:"moderate/cssTooltipsEmoji/cssTooltips.gif", 
-    dif:"mod", ref: "oth", lang: "css"}, //wds
+    link: "easy/cssTooltipsEmoji/index.html", 
+    screen:"easy/cssTooltipsEmoji/cssTooltips.gif", 
+    dif:"eas", ref: "oth", lang: "css"},
 
     {projectName: "Magic 8 Ball", 
     link: "moderate/magicBall/index.html", 

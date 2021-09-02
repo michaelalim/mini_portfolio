@@ -1,0 +1,16 @@
+I learned how to use:
+
+That I don't need to create the html elements inside the html file especially if the elements need 
+repeating like in this one.
+
+const var = document.createElement("html element"); // create a new element, very good with loops
+
+node.classList.add(); // create a class for the new elements created in the js
+
+node.appendChild(); // place the newly created element inside an element.
+
+node.classList.toggle(); // toggle between main css element and a toggle one.
+
+Reviewed about the grid-template-columns: repeat (auto-fit, minmax(30%, 1fr));
+and it's relation to grid-auto-rows: "preferred height of the object"
+
