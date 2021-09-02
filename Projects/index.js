@@ -35,7 +35,12 @@ const projectArr = [
     {projectName: "Button Animation", 
     link: "moderate/buttonAnimation/index.html", 
     screen:"moderate/buttonAnimation/buttonAnimation.gif", 
-    dif:"mod", ref: "oth", lang: "css"}    
+    dif:"mod", ref: "oth", lang: "css"},
+
+    {projectName: "3D Button Animation", 
+    link: "moderate/button3dAnimation/index.html", 
+    screen:"moderate/button3dAnimation/button3dAnimation.gif", 
+    dif:"mod", ref: "oth", lang: "css"}
 ];
 
 //randomizing the order of my projects 

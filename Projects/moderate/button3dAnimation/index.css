@@ -1,0 +1,79 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(173,179,186,1) 100%);
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* set the perspective of the user from the screen*/ perspective: 800px;
+}
+
+.btn{
+    position: relative;
+    height: 81px;
+    width: 201px;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    transform: translateZ(-75px);
+}
+
+.btn:hover{
+    transform: rotateX(-90deg) translateY(75px);
+}
+
+.side{
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+}
+
+.side:hover{
+    cursor: pointer;
+}
+
+.mainside{
+    background: #aaa;
+    transform: translateZ(40px);
+}
+
+.hoverside{
+    background: #55555530;
+    color: #ddd;
+    transform: rotateX(90deg) translateZ(40px);
+}
+
+.home{
+    background: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 85%);
+    border-radius: 100%;
+    padding: 20px;
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    font-weight: bolder;
+    transition: background linear 100ms, color linear 100ms;
+}
+
+.home:hover,
+.home:focus{
+    background: hsl(0, 0%, 30%);
+    color: hsl(0, 0%, 5%);
+}
