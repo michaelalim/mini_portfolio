@@ -102,16 +102,21 @@ button:hover{
     color: hsl(40, 58%, 77%);
 }
 
+.underline{
+    position: relative;
+    overflow: hidden;
+}
+
 .underline::before{
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -10%;
     left: 0;
     right: 0;
     top: 95%;
     background: hsl(220, 68%, 27%);
     transform: scale(0);
-    transition: transform ease-in-out 200ms;
+    transition: transform ease-in-out 400ms;
     transform-origin: center;
 }
 

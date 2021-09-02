@@ -51,6 +51,8 @@ function displayRand() {
     console.log(rnd);
     displayEl.textContent = quote[rnd];
 
+    quote.splice(rnd, 1);
+
     setTimeout(() => {
         displayEl.classList.remove("adviceAnimation");
     }, 1000);

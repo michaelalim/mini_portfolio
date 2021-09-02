@@ -78,7 +78,7 @@ h1{
     background: #222;
     content: attr(data-tooltip);
     color: white;
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 1.5rem 1rem;
     text-align: center;
     border-radius: 1rem;
