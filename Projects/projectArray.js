@@ -47,5 +47,10 @@ export const projectArr = [
     {projectName: "Study Timer", 
     link: "moderate/timer/index.html", 
     screen: "moderate/timer/timer.gif", 
-    dif:"mod", ref: "scr", lang: "js"}
+    dif:"mod", ref: "scr", lang: "js"},
+
+    {projectName: "YouTube Clone", 
+    link: "hard/youtubeClone/index.html", 
+    screen: "hard/youtubeClone/youtubeClone.gif", 
+    dif:"hard", ref: "oth", lang: "js"}
 ];
