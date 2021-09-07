@@ -42,5 +42,10 @@ export const projectArr = [
     {projectName: "CSS Loading Spinner", 
     link: "easy/spinner/index.html", 
     screen:"easy/spinner/spinner.gif", 
-    dif:"eas", ref: "oth", lang: "css"}
+    dif:"eas", ref: "oth", lang: "css"},
+
+    {projectName: "Study Timer", 
+    link: "moderate/timer/index.html", 
+    screen: "moderate/timer/timer.gif", 
+    dif:"mod", ref: "scr", lang: "js"}
 ];
