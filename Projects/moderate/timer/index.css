@@ -22,6 +22,44 @@ body{
     
 }
 
+.timer p{
+    margin: 0;
+}
+
+.timer .status-el{
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    position: absolute;
+    top: 25%;
+}
+
+.close-settings{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    right: 14%;
+    top: 15%;
+    border-radius: 50%;
+    border: 5px solid #003140;
+    padding: 5px;
+    padding-bottom: 2.5px;
+    border: none;
+    box-shadow: -2px 2px 5px #003140;
+    z-index: 15;
+    background: #006470;
+    color: #75dbe6;
+    outline: none;
+}
+
+.close-settings:hover{
+    cursor: pointer;
+    background: #3197a2;
+    color: #003140;
+}
+
 .container{
     display: flex;
     justify-content: space-between;

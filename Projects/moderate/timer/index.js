@@ -1,3 +1,5 @@
+// Simple solution but I'm definitely satisfied with it. You can do settings on the top right to adjust with your own preference of timers.
+
 const timer = document.getElementById("time-display");
 const workBtn = document.getElementById("work-btn");
 const shortBreakBtn = document.getElementById("short-break-btn");
@@ -11,8 +13,11 @@ const lbtTimer = document.getElementById("lbt-timer");
 const sbtTimer = document.getElementById("sbt-timer");
 const wtTimer = document.getElementById("wt-timer");
 const saveBtn = document.getElementById("save-btn");
+const statusEl = document.getElementById("status-el");
+const closeSettingsBtn = document.getElementById("close-settings");
 
 let time, minutes, seconds, countdown;
+let message, dots;
 
 let longBTimer = lbtTimer.value * 60;
 let shortBTimer = sbtTimer.value * 60;
@@ -35,16 +40,34 @@ workBtn.addEventListener("click", () => {
     setTime(time);
     workBtn.style.display = "none";
     resumeBtn.style.display = "initial";
+    
+    message = "Currently working"
+    displayStatus(message);
+    statusEl.style.left = "8%";
+    
+    stopBtn.addEventListener("click", clearStatus);
 });
 
 shortBreakBtn.addEventListener("click", () => {
     time = shortBTimer;
     setTime(time);
+    
+    message = "Taking a short break"
+    displayStatus(message);
+    statusEl.style.left = "4%";
+    
+    stopBtn.addEventListener("click", clearStatus);
 });
 
 longBreakBtn.addEventListener("click", () => {
     time = longBTimer;
     setTime(time);
+    
+    message = "Having a good long break"
+    displayStatus(message);
+    statusEl.style.left = "2%";
+    
+    stopBtn.addEventListener("click", clearStatus);
 });
 
 stopBtn.addEventListener("click", () => {
@@ -62,6 +85,17 @@ settingsBtn.addEventListener("click", () => {
     } else {
         settings.style.display = "block";
     }
+    
+    if (closeSettingsBtn.style.display === "block"){
+        closeSettingsBtn.style.display = "none";
+    } else {
+        closeSettingsBtn.style.display = "block";
+    }
+})
+
+closeSettingsBtn.addEventListener("click", () => {
+    closeSettingsBtn.style.display = "none";
+    settings.style.display = "none";
 })
 
 
@@ -103,3 +137,23 @@ function runTimer() {
     time--;
     
 };
+
+function displayStatus(msg){
+    statusEl.textContent = msg;
+    dots = setInterval(() => {
+        if(statusEl.textContent !== msg + "..."){
+            statusEl.textContent += "."
+        } else {
+            statusEl.textContent = msg
+        }
+    }, 500)
+}
+
+function clearStatus(){
+    statusEl.textContent = "";
+    clearInterval(dots);
+}
+
+function pauseDots(){
+    clearInterval(dots);
+}
