@@ -73,6 +73,7 @@ header h3{
 }
 
 sidebar{
+    width: 200px;
     background: #e6e7f8;
     box-shadow: 3px 3px 10px 2px #161616;
     grid-area: s;

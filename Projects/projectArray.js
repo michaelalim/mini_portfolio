@@ -50,7 +50,7 @@ export const projectArr = [
     dif:"mod", ref: "scr", lang: "js"},
 
     {projectName: "YouTube Clone", 
-    link: "hard/youtubeClone/index.html", 
+    link: "hard/youtubeClone/youtubeClone/webpages/home/index.html", 
     screen: "hard/youtubeClone/youtubeClone.gif", 
     dif:"hard", ref: "oth", lang: "js"}
 ];

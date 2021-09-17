@@ -10,13 +10,13 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.main-container{
+.main-container-home{
     z-index: 1;
     display: grid;
     grid-template-columns: repeat(15, 1fr);
     grid-auto-rows: 1.5fr 1fr auto;
     grid-template-areas: 
-        "n h h h h h h h h h h h h h h"
+        "h h h h h h h h h h h h h h h"
         "n c c c c c c c c c c c c c c"
         "n v v v v v v v v v v v v v v";
 }
@@ -26,7 +26,7 @@ body{
     position: fixed;
     height: 60px;
     right: 0;
-    width: 93.4%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,12 +80,13 @@ body{
     cursor: pointer;
 }
 
-nav.sidebar img{
+
+.logo-section img{
     position: absolute;
     display: block;
     height: 55px;
     width: 80px;
-    left: 80px;
+    top: 0;
 }
 
 .search-bar-section form{
@@ -145,6 +146,7 @@ nav.sidebar img{
     border-radius: 50%;
     height: 35px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .others-section img{
@@ -169,10 +171,11 @@ nav.sidebar{
     grid-area: n;
     display: flex;
     flex-direction: column;
-    height: 100vh;    
+    height: calc(100vh - 60px);    
     width: 85px;
     z-index: 10;
     background: #222;
+    bottom: 0;
 }
 
 nav.sidebar button{
@@ -196,14 +199,23 @@ nav.sidebar button:hover{
     cursor: pointer;
 }
 
-nav.sidebar .menu-btn{
+header.header .menu-btn{
+    background: #222;
+    border: none;
+    color: #ddd;
     height: 60px;
-    padding-top: 15px;
+    padding: 10px 10px;
+    z-index: 20;
+    width: 89px;
 }
 
-nav.sidebar .menu-btn:hover{
+header.header .menu-btn:hover{
     background: none;
-    border: none;
+    border-bottom: 1px solid #222;
+}
+
+header.header .menu-btn span:hover{
+    cursor: pointer;
 }
 
 nav.sidebar button .side-icon{
@@ -211,73 +223,194 @@ nav.sidebar button .side-icon{
     margin-bottom: 10px;
 }
 
-section.categories{
-    grid-area: c;
-    height: 55px;
-    z-index: 0;
+.menu-section{
     position: fixed;
-    border-bottom: 1px solid #333;
-    right: 0;
-    width: 93.4vw;
-    top: 60px;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: #08080899;
+    display: none;
     overflow: hidden;
-    z-index: 4;
-    background: #212121;
-    opacity: 0.975;
-    /* transition: ease-in 100ms; */
 }
 
-section.categories button.category{
-    position: relative;
-    width: max-content;
-    padding: 8px 15px;
-    margin: 10px 5px;
-    background: #333;
-    border: 0.1px solid #555;
-    outline: none;
-    border-radius: 25px;
-    font-weight: 550;
-    color: #eee;
+.sidebar-ani{
+    animation: show-menu 200ms linear;
 }
 
-section.categories button.category:first-child{
-    margin-left: 30px;
+.sidebar-ani-rev{
+    animation: show-menu 200ms linear reverse;
 }
 
-section.categories button.category.active{
-    background: #ddd;
-    color: #111;
+.off-sidebar-space{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 240px);
+    height: 100vh;
 }
 
-.video-content{
-    margin: 50px 0;
-    padding: 70px 20px;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-    grid-auto-rows: 280px;
+.off-sidebar-container{
+    opacity: 1;
+    width: 240px;
+    background: #222;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.off-menu-logo{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-items: center;
-    background: #131313;
-    grid-area: v;
+    margin-top: 3px;
 }
 
-.video-el{
-    height: 150px;
-    width: 260px;
-    margin-bottom: 5px;
-    background-image: url(imgs/tempo_thumbnail.jpg);
-    background-color: black;
-    background-blend-mode: difference;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+.off-menu-logo img{
+    height: 55px;
+    width: 80px;
+    left: 80px;
 }
 
-.video-el:hover{
-    background-image: url(imgs/album.PNG);
-    background-size: cover;
+.off-menu-logo .off-menu-btn{
+    background: #222;
+    border: none;
+    outline: none;
+    color: #ccc;
+    padding: 5px;
+}
+
+.off-menu-btn{
     cursor: pointer;
+}
+
+.off-menu-btn span{
+    display: inline-block;
+    font-size: 30px;
+}
+
+.off-btn{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    color: #eee;
+    margin: 0;
+    background: transparent;
+}
+
+.off-btn:hover{
+    cursor: pointer;
+    background: #444;
+}
+
+.off-current{
+    background: #444;
+}
+
+.off-current:hover{
+    background: #777;
+}
+
+.off-home-btn{
+    margin-top: 12px;
+    padding-top: 0;
+}
+
+.off-btn span{
+    display: block;
+}
+
+.off-side-icon{
+    position: absolute;
+    left: 30px;
+}
+
+.off-btn-text{
+    position: absolute;
+    left: 80px;
+}
+
+.section-division{
+    border-bottom: 1px solid #333;
+    background:#222;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    padding: 12px 0;
+}
+
+.third-division h6,
+.fourth-division h6{
+    margin: 5px 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.third-division span{
+    font-size: 0.8rem;
+}
+
+.third-division .off-btn-image-subs{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 30px;
+}
+
+.third-division img{
+    height: 25px;
+    width: 25px;
+}
+
+.third-division > div:nth-child(2),
+.fourth-division > button:nth-child(2){
+    margin-top: 10px;
+}
+
+.third-division button span{
+    font-size: 0.9rem;
+}
+
+.third-division .off-side-icon.material-icons-outlined{
+    font-size: 1.5rem;
+}
+
+.sixth-division a{
+    text-decoration: none;
+    font-size: 0.65rem;
+    display: inline-block;
+    font-weight: bold;
+    color: #aaa;
+    margin: 0 3px;
+}
+
+.sixth-division a:visited{
+    color: #aaa;
+}
+
+.sixth-division div{
+    margin: 10px 30px;
+}
+
+.sixth-division .copyright{
+    font-size: 0.65rem;
+    display: block;
+    margin: 10px 30px;
+    color: #888;
+}
+
+i.fa{
+    font-size: 24px;
 }
 
 .channel-row-container .video-texts h5.video-title:hover,
@@ -328,7 +461,9 @@ h6{
 }
 
 .channel-row-container h5{
-    top: 0;
+    position: relative;
+    top: 5px;
+    letter-spacing: .5px;
     margin-bottom: 10px;
 }
 
@@ -342,39 +477,14 @@ h6{
     margin-bottom: 5px;
 }
 
-@media all and (max-width: 1150px){
+/* Except media queries which I think should always be in the bottom */
 
-    section.categories, 
-    .video-content{
-        right: -5px;
+@keyframes show-menu{
+    0% {
+        transform: translateX(-90%);
     }
-
-    .video-content{
-        padding-left: 30px;
-    }
-}
-
-@media all and (max-width: 1050px){
-
-    section.categories, 
-    .video-content{
-        right: -15px;
-    }
-
-    .video-content{
-        padding-left: 30px;
-    }
-}
-
-@media all and (max-width: 950px){
-
-    section.categories, 
-    .video-content{
-        right: -25px;
-    }
-
-    .video-content{
-        padding-left: 30px;
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -397,36 +507,15 @@ h6{
         border: none;
     }
 
-    section.categories, 
-    .video-content{
-        right: -35px;
+    #home-btn, #explore-btn, #sub-btn, #lib-btn{
+        display: none;
     }
 
-    .video-content{
-        padding-left: 40px;
-    }
-}
-
-@media all and (max-width: 750px){
-
-    section.categories, 
-    .video-content{
-        right: -45px;
+    #menu-btn{
+        border-bottom: 1px solid #333;
     }
 
-    .video-content{
-        padding-left: 50px;
-    }
-}
-
-@media all and (max-width: 650px){
-
-    section.categories, 
-    .video-content{
-        right: -55px;
-    }
-
-    .video-content{
-        padding-left: 60px;
+    nav.sidebar{
+        z-index: -1;
     }
 }
