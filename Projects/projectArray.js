@@ -17,12 +17,12 @@ export const projectArr = [
     {projectName: "Transparent Login Form", 
     link: "easy/basicLoginScreen/index.html", 
     screen:"easy/basicLoginScreen/loginForm.gif", 
-    dif:"eas", ref: "oth", lang: "css"},
+    dif:"eas", ref: "wds", lang: "css"},
     
     {projectName: "CSS-Made Emoji & Tooltip", 
     link: "easy/cssTooltipsEmoji/index.html", 
     screen:"easy/cssTooltipsEmoji/cssTooltips.gif", 
-    dif:"eas", ref: "oth", lang: "css"},
+    dif:"eas", ref: "wds", lang: "css"},
 
     {projectName: "Magic 8 Ball", 
     link: "moderate/magicBall/index.html", 
@@ -32,17 +32,17 @@ export const projectArr = [
     {projectName: "Button Animation", 
     link: "moderate/buttonAnimation/index.html", 
     screen:"moderate/buttonAnimation/buttonAnimation.gif", 
-    dif:"mod", ref: "oth", lang: "css"},
+    dif:"mod", ref: "wds", lang: "css"},
 
     {projectName: "3D Button Animation", 
     link: "moderate/button3dAnimation/index.html", 
     screen:"moderate/button3dAnimation/button3dAnimation.gif", 
-    dif:"mod", ref: "oth", lang: "css"},
+    dif:"mod", ref: "wds", lang: "css"},
 
     {projectName: "CSS Loading Spinner", 
     link: "easy/spinner/index.html", 
     screen:"easy/spinner/spinner.gif", 
-    dif:"eas", ref: "oth", lang: "css"},
+    dif:"eas", ref: "wds", lang: "css"},
 
     {projectName: "Study Timer", 
     link: "moderate/timer/index.html", 
@@ -52,10 +52,10 @@ export const projectArr = [
     {projectName: "YouTube Clone", 
     link: "hard/youtubeClone/youtubeClone/webpages/home/index.html", 
     screen: "hard/youtubeClone/youtubeClone.gif", 
-    dif:"hard", ref: "oth", lang: "js"},
+    dif:"hard", ref: "wds", lang: "js"},
 
     {projectName: "Price Options Screen", 
     link: "hard/priceComparison/index.html", 
     screen: "hard/priceComparison/priceComparison.png", 
-    dif:"hard", ref: "oth", lang: "css"}
+    dif:"hard", ref: "wds", lang: "css"}
 ];

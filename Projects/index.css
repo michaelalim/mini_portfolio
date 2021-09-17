@@ -114,6 +114,7 @@ legend div{
     width: 120px;
     margin: 0;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: none;
 }
 
 div .difficulty,
@@ -145,7 +146,7 @@ div .resource{
 #res-div{
     padding: 0;
     margin: 120px 0 0 0;
-    height: 50px;
+    height: 70px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -338,14 +339,14 @@ div .resource{
         margin: 0;
         margin-right: 17px;
         height: 50px;
-        width: 50%;
+        width: 70%;
         display: grid;
         justify-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 10px 50px;
         grid-template-areas: 
-            "res res res"
-            "resall scr oth";
+            "res res res res"
+            "resall scr wds oth";
         flex-shrink: 1;
     }
 
@@ -365,6 +366,10 @@ div .resource{
 
     #scrimba{
         grid-area: scr;
+    }
+
+    #wds{
+        grid-area: wds;
     }
 
     #others{
@@ -532,16 +537,17 @@ div .resource{
         display: grid;
         justify-items: stretch;
         grid-template-columns: 1fr;
-        grid-template-rows: 10px 1fr 1fr 1fr;
+        grid-template-rows: 10px 1fr 1fr 1fr 1fr;
         grid-template-areas: 
             "res"
             "resall"
             "scr"
+            "wds"
             "oth";
     }
 
     .res-div{
-        margin-top: 15px;
+        margin-top: 7px;
         display: flex;
         margin-left: 25%;
     }
