@@ -1,0 +1,158 @@
+$weak1: rgb(218, 0, 55);
+$weak2: rgb(68, 68, 68);
+$notIncluded: rgb(170, 170, 170);
+$strong: rgb(237, 237, 237);
+$bg: rgb(23, 23, 23);
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background: $bg;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    padding-top: 70px;
+    background: $strong;
+    width: 280px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    display: relative;
+    align-items: center;
+    color: $bg;
+    box-shadow: -1px 1px 5px black;
+
+    .price{
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        font-size: 3rem;
+        max-height: 80px;
+        font-weight: normal;
+    }
+
+        .sup{
+            display: inline-block;
+            font-size: 1.5rem;
+            transform: translate(-10%, -50%);
+            
+        }
+
+        .sub{
+            display: inline-block;
+            font-size: 1.5rem;
+        }
+
+    .level{
+        font-size: 1rem;
+        margin: none;
+    }
+
+    .features{
+        padding-top: 20px;
+        margin-top: 30px;
+        width: 60%;
+        min-height: 240px;
+        text-align: center;
+        border-top: 1px solid $weak2;
+    }
+        ul{
+            text-decoration: none;
+        }
+
+            li{
+                margin: 10px 0;
+                list-style: none;
+                transform: translateX(-10%);
+                position: relative;
+            }
+
+            li::before{
+                content: "";
+                height: 24px;
+                width: 24px;
+                overflow: hidden;
+                background: url(./check.png);
+                background-size: cover;
+                position: absolute;
+                transform: translateX(-125%);
+            }
+
+                .isNotIncluded{
+                    color: $notIncluded;
+                    text-decoration: line-through;
+                }
+
+                .isNotIncluded::before{
+                    content: "";
+                    background: url(./cross.png);
+                    position: absolute;
+                    transform: translateX(-125%);
+                    background-size: cover;
+                }
+    .start{
+        padding: 10px 50px;
+        border: none;
+        outline: none;
+        background: $weak1;
+        border-radius: 3px;
+        color: $strong;
+        font-weight: bolder;
+    }
+
+        .start:hover{
+            opacity: 0.9;
+            cursor: pointer;
+        }
+}
+
+.container:first-child{
+    transform: translateX(20px);
+}
+
+.container:nth-child(2){
+    background: $weak1;
+    min-height: 500px;
+    z-index: 5;
+    width: 300px;
+    color: $strong;
+    height: 90vh;
+
+    .level{
+        margin-bottom: 30px;
+    }
+
+    .start{
+        transform: translateY(25%);
+        background: $strong;
+        color: $bg;
+    }
+}
+
+.container:nth-child(3){
+    transform: translateX(-20px);
+}
+
+.home{
+    background: $weak1;
+    color: $strong;
+    border-radius: 100%;
+    padding: 20px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+
+    .home:hover,
+    .home:focus{
+        opacity: 0.8;
+    }

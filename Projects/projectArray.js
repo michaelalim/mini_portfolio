@@ -52,5 +52,10 @@ export const projectArr = [
     {projectName: "YouTube Clone", 
     link: "hard/youtubeClone/youtubeClone/webpages/home/index.html", 
     screen: "hard/youtubeClone/youtubeClone.gif", 
-    dif:"hard", ref: "oth", lang: "js"}
+    dif:"hard", ref: "oth", lang: "js"},
+
+    {projectName: "Price Options Screen", 
+    link: "hard/priceComparison/index.html", 
+    screen: "hard/priceComparison/priceComparison.png", 
+    dif:"hard", ref: "oth", lang: "css"}
 ];
