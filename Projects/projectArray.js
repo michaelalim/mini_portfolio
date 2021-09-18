@@ -40,9 +40,9 @@ export const projectArr = [
     dif:"mod", ref: "wds", lang: "css"},
 
     {projectName: "CSS Loading Spinner", 
-    link: "easy/spinner/index.html", 
-    screen:"easy/spinner/spinner.gif", 
-    dif:"eas", ref: "wds", lang: "css"},
+    link: "moderate/spinner/index.html", 
+    screen:"moderate/spinner/spinner.gif", 
+    dif:"mod", ref: "wds", lang: "css"},
 
     {projectName: "Study Timer", 
     link: "moderate/timer/index.html", 
@@ -57,5 +57,10 @@ export const projectArr = [
     {projectName: "Price Options Screen", 
     link: "hard/priceComparison/index.html", 
     screen: "hard/priceComparison/priceComparison.png", 
+    dif:"hard", ref: "wds", lang: "css"},
+
+    {projectName: "Landing Page Example", 
+    link: "hard/landingPageExamples/index.html", 
+    screen: "hard/landingPageExamples/landingPageExamples.gif", 
     dif:"hard", ref: "wds", lang: "css"}
 ];
